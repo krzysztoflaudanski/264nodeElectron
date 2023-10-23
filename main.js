@@ -10,7 +10,7 @@ function main() {
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
-            frame: false
+            frame: false,
         },
         width: 520,
         height: 750,
@@ -19,7 +19,7 @@ function main() {
     // load app/index.html as the window content
     mainWindow.loadFile(path.join('app', 'index.html'));
 
-    mainWindow.webContents.openDevTools();
+    //mainWindow.webContents.openDevTools();
 }
 
 app.on('ready', main);

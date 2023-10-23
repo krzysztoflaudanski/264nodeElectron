@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { render } from 'react-dom';
-import Description from './components/Description/Description';
 
 const App = () => {
 
@@ -67,7 +66,6 @@ const App = () => {
             {(status === 'off') && <button className="btn" onClick={startTimer}>Start</button>}
             {(status !== 'off') && <button className="btn" onClick={stopTime}>Stop</button>}
             <button className="btn btn-close" onClick={closeApp}>X</button>
-            <Description />
         </div>
     )
 };
