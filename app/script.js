@@ -12,11 +12,11 @@ const App = () => {
         if (time === 0) {
             playBell();
             if (status === 'work') {
-                setTime(10)
+                setTime(20)
                 setStatus('rest')
             }
             if (status === 'rest') {
-                setTime(15)
+                setTime(1200)
                 setStatus('work')
             }
         }
@@ -30,7 +30,7 @@ const App = () => {
     }
 
     const startTimer = () => {
-        setTime(15);
+        setTime(1200);
         setStatus('work');
         setTimer(setInterval(() => {
             setTime(time => time - 1);
@@ -67,6 +67,7 @@ const App = () => {
             {(status === 'off') && <button className="btn" onClick={startTimer}>Start</button>}
             {(status !== 'off') && <button className="btn" onClick={stopTime}>Stop</button>}
             <button className="btn btn-close" onClick={closeApp}>X</button>
+            <Description />
         </div>
     )
 };
